@@ -6,15 +6,8 @@ export default function Navigation() {
         <>
             <ul className="menu">
                 <li>
-                    <Link to="#0" className="active">Home</Link>
-                    <ul className="submenu">
-                    <li>
-                        <Link to="/" className="active">Home One</Link>
-                    </li>
-                    <li>
-                        <Link to="/index-2">Home Two</Link>
-                    </li>
-                    </ul>
+                    <Link to="/" className="active">Home</Link>
+                   
                 </li>
                 <li>
                     <Link to="#0">movies</Link>
@@ -22,15 +15,11 @@ export default function Navigation() {
                     <li>
                         <Link to="/movie-grid">Movie Grid</Link>
                     </li>
-                    <li>
-                        <Link to="/movie-list">Movie List</Link>
-                    </li>
+                   
                     <li>
                         <Link to="/movie-details">Movie Details</Link>
                     </li>
-                    <li>
-                        <Link to="/movie-details-2">Movie Details 2</Link>
-                    </li>
+                   
                     <li>
                         <Link to="/movie-ticket-plan">Movie Ticket Plan</Link>
                     </li>
@@ -49,9 +38,7 @@ export default function Navigation() {
                 <li>
                     <Link to="#0">pages</Link>
                     <ul className="submenu">
-                    <li>
-                        <Link to="/about">About Us</Link>
-                    </li>
+                    
                     <li>
                         <Link to="/apps-download">Apps Download</Link>
                     </li>
