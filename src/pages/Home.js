@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { MovieContext } from "../useContext/ContextProvider";
-import { URL } from "../utils/Url";
+import React, { useContext, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// import { URL } from "../utils/Url";
 
 export default function Home() {
-  const { movieData } = useContext(MovieContext);
-  console.log(movieData);
+  const dispatch = useDispatch();
+  const movieData = useSelector((state) => state.movies);
 
   return (
     <>
@@ -342,20 +342,20 @@ export default function Home() {
                     View All
                   </a>
                 </div>
-                <div className="row mb-30-none justify-content-center">
-                  {movieData &&
-                    movieData.map((cv, idx, arr) => {
-                    
+                {/* <div className="row mb-30-none justify-content-center">
+                  {movieData.data &&
+                    movieData.data.map((cv, idx, arr) => {
                       return (
-                       
-                  
-                      
                         <div key={cv.id} className="col-sm-6 col-lg-4">
                           <div className="movie-grid">
                             <div className="movie-thumb c-thumb">
                               <a href="#0">
                                 <img
-                                  src={URL+cv.attributes.image_thumb.data.attributes.url}
+                                  src={
+                                    URL +
+                                    cv.attributes.image_thumb.data.attributes
+                                      .url
+                                  }
                                   alt="movie"
                                   height={300}
                                 />
@@ -389,10 +389,9 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-                       
                       );
                     })}
-                </div>
+                </div> */}
               </div>
               <div className="article-section padding-bottom">
                 <div className="section-header-1">
